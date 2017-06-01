@@ -14,6 +14,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { TestComponent } from './components/test/test.component';
 
 import { LoginService } from './services/login.service';
+import { UserService } from './services/user.service';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -31,7 +32,8 @@ import { AppRoutingModule } from './app.routing';
                   RegisterComponent,
                   SearchbarComponent,
                   TestComponent ],
-  providers:    [ LoginService ],
+  providers:    [ LoginService,
+                  UserService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

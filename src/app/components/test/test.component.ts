@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { LoginService } from '../../services/login.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'test',
@@ -7,20 +7,19 @@ import { LoginService } from '../../services/login.service';
 })
 export class TestComponent implements OnInit  { 
     componentName = 'Test';
-    token:any;
+    user:any;
 
-    constructor(private loginService:LoginService) {}
+    constructor(private userService:UserService) {}
 
     ngOnInit() {
-        this.login("wakar","wak19524");
+        this.register("rounak","wak19524","rounak@gmail.com");
     }
 
-    login(username:string,password:string) {
-        this.loginService.login(username,password)
-            .subscribe(resp => {
-                console.log(resp);
-                this.token = resp.token;
-            },
-                err => console.log(err));
+    register(username:string,password:string,email:string) {
+        this.userService.register(username,password,email)
+            .subscribe(user => {
+                console.log(user);
+                this.user = user
+            },err => console.log(err));
     }
 }
