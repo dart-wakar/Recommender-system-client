@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { RecommendedMoviesService } from '../../services/recommended-movies.service';
+import { PreferencesService } from '../../services/preferences.service';
 
 @Component({
   selector: 'test',
@@ -7,19 +7,19 @@ import { RecommendedMoviesService } from '../../services/recommended-movies.serv
 })
 export class TestComponent implements OnInit  { 
     componentName = 'Test';
-    movies: any[];
+    preferences: any[];
 
-    constructor(private recommendedMoviesService:RecommendedMoviesService) {}
+    constructor(private preferencesService:PreferencesService) {}
 
     ngOnInit() {
-        this.getMovieRecommendations();
+        this.getPreferences();
     }
 
-    getMovieRecommendations() {
-        this.recommendedMoviesService.getRecommendationsForSingleMovie(58)
-            .subscribe(movies => {
-                console.log(movies);
-                this.movies = movies
+    getPreferences() {
+        this.preferencesService.getAllPreferences()
+            .subscribe(preferences => {
+                console.log(preferences);
+                this.preferences = preferences;
             },err => console.log(err));
     }
 }

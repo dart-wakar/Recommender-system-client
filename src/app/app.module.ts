@@ -16,6 +16,7 @@ import { TestComponent } from './components/test/test.component';
 import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
 import { RecommendedMoviesService } from './services/recommended-movies.service';
+import { PreferencesService } from './services/preferences.service';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -35,7 +36,8 @@ import { AppRoutingModule } from './app.routing';
                   TestComponent ],
   providers:    [ LoginService,
                   UserService,
-                  RecommendedMoviesService ],
+                  RecommendedMoviesService,
+                  PreferencesService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
