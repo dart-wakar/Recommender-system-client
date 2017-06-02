@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { MoviesService } from '../../services/movies.service';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'test',
@@ -9,14 +9,14 @@ export class TestComponent implements OnInit  {
     componentName = 'Test';
     movies: any[];
 
-    constructor(private moviesService:MoviesService) {}
+    constructor(private searchService:SearchService) {}
 
     ngOnInit() {
         this.getMovies();
     }
 
     getMovies() {
-        this.moviesService.getMoviesFromListOfIds([25,830])
+        this.searchService.getMoviesBySearchkey("heavy")
             .subscribe(movies => {
                 console.log(movies);
                 this.movies = movies;

@@ -18,6 +18,7 @@ import { UserService } from './services/user.service';
 import { RecommendedMoviesService } from './services/recommended-movies.service';
 import { PreferencesService } from './services/preferences.service';
 import { MoviesService } from './services/movies.service';
+import { SearchService } from './services/search.service';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -39,7 +40,8 @@ import { AppRoutingModule } from './app.routing';
                   UserService,
                   RecommendedMoviesService,
                   PreferencesService,
-                  MoviesService ],
+                  MoviesService,
+                  SearchService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
