@@ -15,6 +15,7 @@ import { TestComponent } from './components/test/test.component';
 
 import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
+import { RecommendedMoviesService } from './services/recommended-movies.service';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -33,7 +34,8 @@ import { AppRoutingModule } from './app.routing';
                   SearchbarComponent,
                   TestComponent ],
   providers:    [ LoginService,
-                  UserService ],
+                  UserService,
+                  RecommendedMoviesService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,5 +1,9 @@
 <h1>{{componentName}}</h1>
-<div *ngIf = "user">
-    <h2>{{user.username}}</h2>
-    <span>{{user.email}}</span>
+<div *ngIf = "movies">
+    <ul>
+        <li *ngFor = "let movie of movies">
+            <h2>{{movie.title}}</h2>
+            <span>{{movie.genres}}</span>
+        </li>
+    </ul>
 </div>

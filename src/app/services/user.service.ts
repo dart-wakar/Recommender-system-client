@@ -11,7 +11,7 @@ export class UserService {
 
     private userRegisterUrl = BASE_URL+"users/register/";
     private getCurrentUserUrl = BASE_URL+"currentuser/";
-    private token = "ae7302528914c2723c9747dba4e68f9bf5da2834";
+    private token = "4ace668d5cdc98b9927d9b7e4de1c46b07bfc7ac";
     private headers = new Headers({'Content-Type':'application/json'});
 
     register(username:string,password:string,email:string):Observable<any> {

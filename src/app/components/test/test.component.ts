@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { RecommendedMoviesService } from '../../services/recommended-movies.service';
 
 @Component({
   selector: 'test',
@@ -7,19 +7,19 @@ import { UserService } from '../../services/user.service';
 })
 export class TestComponent implements OnInit  { 
     componentName = 'Test';
-    user:any;
+    movies: any[];
 
-    constructor(private userService:UserService) {}
+    constructor(private recommendedMoviesService:RecommendedMoviesService) {}
 
     ngOnInit() {
-        this.getCurrentUser();
+        this.getMovieRecommendations();
     }
 
-    getCurrentUser() {
-        this.userService.getCurrentUser()
-            .subscribe(user => {
-                console.log(user);
-                this.user = user
+    getMovieRecommendations() {
+        this.recommendedMoviesService.getRecommendationsForSingleMovie(58)
+            .subscribe(movies => {
+                console.log(movies);
+                this.movies = movies
             },err => console.log(err));
     }
 }
