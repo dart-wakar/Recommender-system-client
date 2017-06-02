@@ -1,10 +1,9 @@
 <h1>{{componentName}}</h1>
-<div *ngIf = "preferences">
+<div *ngIf = "movies">
     <ul>
-        <li *ngFor = "let preference of preferences">
-            <h2>{{preference.user}}</h2>
-            <span>{{preference.movie_id}}</span><br>
-            <span>{{preference.rating}}</span>
+        <li *ngFor = "let movie of movies">
+            <h2>{{movie.title}}</h2>
+            <span>{{movie.genres}}</span>
         </li>
     </ul>
 </div>

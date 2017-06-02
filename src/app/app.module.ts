@@ -17,6 +17,7 @@ import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
 import { RecommendedMoviesService } from './services/recommended-movies.service';
 import { PreferencesService } from './services/preferences.service';
+import { MoviesService } from './services/movies.service';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -37,7 +38,8 @@ import { AppRoutingModule } from './app.routing';
   providers:    [ LoginService,
                   UserService,
                   RecommendedMoviesService,
-                  PreferencesService ],
+                  PreferencesService,
+                  MoviesService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
