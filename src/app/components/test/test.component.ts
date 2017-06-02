@@ -12,11 +12,11 @@ export class TestComponent implements OnInit  {
     constructor(private userService:UserService) {}
 
     ngOnInit() {
-        this.register("rounak","wak19524","rounak@gmail.com");
+        this.getCurrentUser();
     }
 
-    register(username:string,password:string,email:string) {
-        this.userService.register(username,password,email)
+    getCurrentUser() {
+        this.userService.getCurrentUser()
             .subscribe(user => {
                 console.log(user);
                 this.user = user
