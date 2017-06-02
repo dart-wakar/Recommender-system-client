@@ -10,12 +10,25 @@ export class PreferencesService {
     constructor(private http: Http) {}
 
     private getAllPreferencesUrl = BASE_URL+"preferences/";
-    private token = "4ace668d5cdc98b9927d9b7e4de1c46b07bfc7ac";
+    private getPreferencesFromListOfIdsUrl = BASE_URL+"preferences/list/";
+    private token = "1d4c626449c43443d13fbf7ffd93fd594f042599";
 
     getAllPreferences():Observable<any> {
         let header = new Headers();
         header.append("Authorization", "Token "+this.token);
         return this.http.get(this.getAllPreferencesUrl,{headers: header})
+                            .map((res) => res.json())
+                            .catch((err) => {
+                                console.log(err);
+                                return Observable.throw(err.json().error || 'Server Error')
+                            });
+    }
+
+    getPreferencesFromListOfIds(ids: number[]):Observable<any> {
+        let header = new Headers();
+        header.append("Content-Type", "application/json");
+        header.append("Authorization", "Token "+this.token);
+        return this.http.post(this.getPreferencesFromListOfIdsUrl,JSON.stringify({ids: ids}),{headers: header})
                             .map((res) => res.json())
                             .catch((err) => {
                                 console.log(err);

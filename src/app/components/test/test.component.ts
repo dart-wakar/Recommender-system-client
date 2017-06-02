@@ -16,7 +16,7 @@ export class TestComponent implements OnInit  {
     }
 
     getPreferences() {
-        this.preferencesService.getAllPreferences()
+        this.preferencesService.getPreferencesFromListOfIds([3,5])
             .subscribe(preferences => {
                 console.log(preferences);
                 this.preferences = preferences;
