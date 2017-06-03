@@ -10,7 +10,7 @@ export class RecommendedMoviesService {
     constructor(private http: Http) {}
 
     private singleMovieRecommendationsUrl = BASE_URL+"recommendedmovies/";
-    private token = "4ace668d5cdc98b9927d9b7e4de1c46b07bfc7ac";
+    private token = "1d4c626449c43443d13fbf7ffd93fd594f042599";
 
     getRecommendationsForSingleMovie(id:number):Observable<any> {
         let header = new Headers();

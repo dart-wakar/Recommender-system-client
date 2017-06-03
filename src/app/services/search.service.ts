@@ -12,6 +12,12 @@ export class SearchService {
     private moviesSearchUrl = BASE_URL+"movies/";
     private token = "1d4c626449c43443d13fbf7ffd93fd594f042599";
 
+    searchMovies(terms: Observable<string>) {
+        return terms.debounceTime(200)
+                    .distinctUntilChanged()
+                    .switchMap(term => this.getMoviesBySearchkey(term));
+    }
+
     getMoviesBySearchkey(searchkey:string):Observable<any> {
         let header = new Headers();
         header.append("Authorization", "Token "+this.token);
