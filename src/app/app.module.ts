@@ -11,6 +11,7 @@ import { MoviesListComponent } from './components/movies-list/movies-list.compon
 import { RecommendedMoviesComponent } from './components/recommended-movies/recommended-movies.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { HomeComponent } from './components/home/home.component';
 import { TestComponent } from './components/test/test.component';
 
 import { LoginService } from './services/login.service';
@@ -35,6 +36,7 @@ import { AppRoutingModule } from './app.routing';
                   RecommendedMoviesComponent,
                   RegisterComponent,
                   SearchbarComponent,
+                  HomeComponent,
                   TestComponent ],
   providers:    [ LoginService,
                   UserService,

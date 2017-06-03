@@ -1,4 +1,6 @@
 <h1>{{componentName}}</h1>
+<button (click) = "goToLogin()">Login</button><br>
+<button (click) = "goToRegister()">Register</button><br>
 <searchbar (onMovieSelected) = "onMovieSelect($event)"></searchbar>
 <div *ngIf = "slctdMovie">
     <recommended-movies [inputMovie] = "slctdMovie"></recommended-movies>
