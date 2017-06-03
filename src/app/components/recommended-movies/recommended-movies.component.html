@@ -1,1 +1,7 @@
 <h1>{{componentName}}</h1>
+<ul>
+    <li *ngFor = "let recommendedMovie of recommendedMovies">
+        <span><h4>{{recommendedMovie.title}}</h4></span>
+        <span>{{recommendedMovie.genres}}</span>
+    </li>
+</ul>

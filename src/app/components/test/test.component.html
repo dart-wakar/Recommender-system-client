@@ -1,10 +1,5 @@
 <h1>{{componentName}}</h1>
 <searchbar (onMovieSelected) = "onMovieSelect($event)"></searchbar>
-<div *ngIf = "recommendedMovies">
-    <ul>
-        <li *ngFor = "let recommendedMovie of recommendedMovies">
-            <span><h4>{{recommendedMovie.title}}</h4></span>
-            <span>{{recommendedMovie.genres}}</span>
-        </li>
-    </ul>
+<div *ngIf = "slctdMovie">
+    <recommended-movies [inputMovie] = "slctdMovie"></recommended-movies>
 </div>
