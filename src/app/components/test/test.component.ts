@@ -9,15 +9,12 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class TestComponent implements OnInit  { 
     componentName = 'Test';
-    searchKey = new BehaviorSubject<string>("");
-    showSuggestions:boolean = false;
-    movies: any[];
-    key:string;
-    currentTerm:string;
-    selectedMovie:any;
+    slctdMovie:any;
     recommendedMovies:any;
 
-    constructor(private searchService:SearchService,private recommendedMoviesService: RecommendedMoviesService) {
+    constructor(private recommendedMoviesService: RecommendedMoviesService) {}
+
+    /*constructor(private searchService:SearchService,private recommendedMoviesService: RecommendedMoviesService) {
         var x= this;
         this.searchService.searchMovies(this.searchKey)
             .subscribe(movies => {
@@ -31,24 +28,29 @@ export class TestComponent implements OnInit  {
                 this.movies = movies;
                 console.log(this.movies)
             });
-    }
+    }*/
 
     ngOnInit() {
         
     }
 
-    selectItem(movie:any) {
+    /*selectItem(movie:any) {
         this.key = movie.title;
         this.showSuggestions = false;
         this.selectedMovie = movie;
-    }
+    }*/
     
     getRecommendedMovies() {
-        console.log(this.selectedMovie.id);
-        this.recommendedMoviesService.getRecommendationsForSingleMovie(this.selectedMovie.id)
+        console.log(this.slctdMovie.id);
+        this.recommendedMoviesService.getRecommendationsForSingleMovie(this.slctdMovie.id)
             .subscribe(movies => {
                 console.log(movies);
                 this.recommendedMovies = movies;
             },err => console.log(err));
+    }
+
+    onMovieSelect(movie:any) {
+        this.slctdMovie = movie;
+        this.getRecommendedMovies();
     }
 }
