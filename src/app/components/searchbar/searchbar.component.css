@@ -1,0 +1,90 @@
+
+#recoInput{
+	width:65%;
+	position:relative;
+	float:left;
+	font-size:19px;
+	text-align: center;
+	border-top:2px solid #d88;
+	border-left:2px solid #d88;
+	border-bottom:2px solid #d88;
+	border-right:none;
+	padding:10px;
+	border-radius:20px 0px 0px 20px;
+}
+#recoInput:focus{
+	outline:0px;
+}
+#searchBar{
+	max-height:50px;
+	overflow:visible;
+	z-index:500;
+}
+#recoButton{
+	font-family: "Raleway","Calibri";
+	position:relative;
+	float:left;
+	width: 26px;
+	height:26px;
+    overflow:hidden;
+	border-top:2px solid #d88;
+	border-right:2px solid #d88;
+	border-bottom:2px solid #d88;
+	border-left:none;
+	padding:8px;
+	border-radius:0px 20px 20px 0px;
+}
+#recoButton:hover{
+	cursor:pointer;
+    box-shadow: 0px 0px 10px #ddd;
+}
+#recoButton:active{
+	cursor:pointer;
+    box-shadow: 0px 0px 10px #eee;
+}
+#suggDropDown{
+	z-index:500;
+	width:90%;
+	font-size:15px;
+	margin:auto;
+	position:relative;
+	clear:left;
+}
+ul#sugg-list{
+	background:white;
+	padding-left:0px;
+	box-shadow: 0px 10px 20px #888;
+}
+li#sugg-item{
+	transition:background 0.3s;
+	padding:10px;
+	padding-left:20px;
+	padding-right:20px;
+	cursor:pointer;
+}
+li#sugg-item:hover{
+	background:#f0f0f0;
+}
+
+/* For Search Bar width adjustment */
+@media screen and (min-width: 350px){
+	#recoInput{
+		width:70%;
+	}
+}
+@media screen and (min-width: 490px){
+	#recoInput{
+		width:82%;
+	}
+}
+@media screen and (min-width: 600px){
+	#recoInput{
+		width:85%;
+	}
+}
+/* For Full Desktop */
+@media screen and (min-width: 800px){
+	#recoInput{
+		width:90%;
+	}
+}

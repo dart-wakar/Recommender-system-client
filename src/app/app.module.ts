@@ -13,6 +13,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { TestComponent } from './components/test/test.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HeaderComponent } from './components/header/header.component';
 
 import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
@@ -37,7 +39,9 @@ import { AppRoutingModule } from './app.routing';
                   RegisterComponent,
                   SearchbarComponent,
                   HomeComponent,
-                  TestComponent ],
+                  TestComponent,
+                  ContactComponent,
+                  HeaderComponent ],
   providers:    [ LoginService,
                   UserService,
                   RecommendedMoviesService,

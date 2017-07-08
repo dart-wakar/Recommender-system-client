@@ -1,0 +1,285 @@
+/* main page content*/
+#content{
+	min-height:100%;
+	z-index:500;
+	/*background:url("/app/assets/Images/poly.png");*/
+}
+.content-main{
+	font-size:18px;
+	padding-top:50px;
+	padding-bottom: 50px;
+	max-width: 70%;
+	margin: auto;
+	/*background-color: black;*/
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#cLeftPanelContainer{
+	min-width: 100%;
+	margin:auto;
+	position:relative;
+	float:left;
+}
+#content-left-panel{
+	line-height: 18px;
+	overflow: hidden;
+	font-size:100%;
+	width:100%;
+	text-align: center;
+}
+#cRightPanelContainer{
+	min-width: 100%;
+	position: relative;
+	float:left;
+	/*background-color: black;*/
+	position:relative;
+	float:left;
+}
+#cRightPanel{
+	margin:auto;
+	padding:20px;
+	width:100%;
+	max-width: 450px;
+	border-left:2px solid #999;
+	min-height: 127px;
+	overflow-y: hidden;
+}
+.panelIcon{
+	position:relative;
+	float:left;
+	padding:10px;
+	padding-left:50px;
+	/*background-color: black;*/
+}
+@media screen and (min-width: 900px){
+	#cLeftPanelContainer{
+		min-width:50%;
+		max-width:50%;
+	}
+	#cRightPanelContainer{
+		min-width:50%;
+		max-width:50%;
+	}
+	#content-left-panel{
+		line-height: 10px;
+		font-size:150%;
+	}
+}
+.content-recommends{
+	font-family: inherit;
+	padding:50px;
+	margin:auto;
+	max-width: 800px;
+	/*background-color: black;*/
+}
+
+.user-options{
+	width:100%;
+	position:relative;
+	clear:left;
+	/*background-color: black;*/
+	padding:10px;
+	text-align: center;
+	font-size:18px;
+}
+/* animations */
+@keyframes shakeless {
+	0% {
+		padding-top:5px;
+	}
+	50% {
+		padding-top:10px;
+	}
+	100% {
+		padding-top:5px;
+	}
+}
+@keyframes shakemore {
+	0% {
+		padding-top:15px;
+	}
+	50% {
+		padding-top:20px;
+	}
+	100% {
+		padding-top:15px;
+	}
+}
+.scroller{
+	width:50px;
+	height:50px;
+	margin:auto;
+	overflow:hidden;
+	opacity:0.4;
+}
+.scroller:hover{
+	cursor:pointer;
+}
+img#tinyScroll{
+	position:absolute;
+	padding:5px;
+	width:39px;
+	animation:shakeless 1s infinite;
+	margin:auto;
+}
+img#largeScroll{
+	position:absolute;
+	width:50px;
+	padding-top:15px;
+	animation:shakemore 1s infinite;
+}
+
+/* footer elements */
+#showcase-holder{
+	position:absolute;
+	overflow:hidden;
+	background:#eee;
+	height:500px;
+	width:100%;
+}
+#desc-holder{
+	text-align: center;
+	min-height: 400px;
+	width:100%;
+	background:#eee;
+	font-size:16px;
+}
+.desc{
+	max-width:700px;
+	width:70%;
+	margin:auto;
+	color:white;
+	opacity:0.95;
+	min-height:300px;
+	padding:40px;
+	background:#f55;
+}
+.simple-holder{
+	width:100%;
+	overflow-y: hidden;
+}
+#how-it-works{
+	padding:40px;
+	padding-top:20px;
+	max-width:900px;
+	margin:auto;
+	overflow:hidden;
+	font-size:16px;
+	text-align:center;
+}
+
+ /*Time Line Elements */
+@keyframes icon-appear{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+.time-line-icon{
+	width:10px;
+	height:10px;
+	opacity:0;
+	border-radius:10px;
+	background:#d88;
+	margin:0px;
+	position:relative;
+	float:right;
+}
+
+.time-line-center-container{
+	width:4px;
+	margin:0px;
+	float:right;
+	margin-right:3px;
+	height:10px;
+	overflow:visible;
+}
+
+#time-line-center{
+	height:100%;
+	width:4px;
+	background:#ddd;
+	position:absolute;
+	border-radius:4px;
+}
+
+.time-line-text{
+	padding:20px;
+}
+
+.time-line-arrow{
+	position:relative;
+	width: 0;
+	height: 0;
+	border-bottom: 20px solid transparent;
+}
+
+.time-line-item{
+	position:relative;
+	width:90%;
+	background:#fff;
+	min-height:200px;
+	margin-bottom:20px;
+	border-bottom:3px solid #d88;
+}
+
+.t-clear-right{
+	clear:right;
+}
+
+.t-clear-left{
+	clear:right;
+}
+
+.t-float-left{
+	float:left;
+	opacity:0;
+	left:-20px;
+}
+
+.t-float-right{
+	float:left;
+	opacity:0;
+	left:20px;
+}
+
+.t-arrow-right{
+	border-left: 10px solid white;
+	border-right:None;
+}
+
+.t-arrow-left{
+	border-left:10px solid white;
+	border-right:None;
+}
+
+/* For Desktop for timeline elements*/
+@media screen and (min-width: 768px){
+	.time-line-center-container{
+		margin:auto;
+		float:none;
+	}
+	.time-line-icon{
+		margin:auto;
+		float:none;
+	}
+	.t-clear-left{
+		clear:left;
+	}
+	.t-float-right{
+		float:right;
+	}
+	.t-arrow-left{
+		border-right:20px solid white;
+		border-left:None;
+	}
+	.t-arrow-right{
+		border-left: 20px solid white;
+		border-right:None;
+	}
+	.time-line-item{
+		width:45%;
+	}
+}

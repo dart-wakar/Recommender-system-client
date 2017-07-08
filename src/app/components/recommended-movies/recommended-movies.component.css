@@ -1,0 +1,10 @@
+/* search area */
+
+.reco-list-container{
+    position:relative;
+    width:80%;
+    background:#222;
+    overflow:hidden;
+    min-height:100px;
+    text-align:center;
+}

@@ -1,7 +1,128 @@
-<h1>{{componentName}}</h1>
-<button (click) = "goToLogin()">Login</button><br>
-<button (click) = "goToRegister()">Register</button><br>
-<searchbar (onMovieSelected) = "onMovieSelect($event)"></searchbar>
-<div *ngIf = "slctdMovie">
-    <recommended-movies [inputMovie] = "slctdMovie"></recommended-movies>
+<header> </header>
+
+<div id="content">
+	<br><br><br>
+	<div class="content-main">
+		<div id="cLeftPanelContainer">
+			<div id="content-left-panel">
+				<h3>You name it!</h3>
+				<b><h2>We recommend</h2></b>
+				<b><h1>The Best</h1></b>
+			</div>
+		</div>
+		<div id="cRightPanelContainer">
+			<div id="cRightPanel">
+				<div class="panelIcon">
+					<a href="#">
+						<img src="/app/assets/movies.png" style="" width="40px"><br>
+						Movies
+					</a>
+				</div>
+				<div class="panelIcon">
+					<a href="#">
+						<img src="/app/assets/books.png" width="40px"><br>
+						Books
+					</a>
+				</div>
+				<div class="panelIcon">
+					<a href="#">
+						<img src="/app/assets/music.png" width="40px"><br>
+						Music
+					</a>
+				</div>
+				<div class="panelIcon">
+					<a href="#">
+						<img src="/app/assets/apps.png" width="40px"><br>
+						Apps
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content-recommends">
+		<searchbar (onMovieSelected) = "onMovieSelect($event)"></searchbar>
+		<div class="user-options">
+			<a (click) = "goToLogin()">Login</a> |
+			<a (click) = "goToRegister()">Register</a><br>
+		</div>
+		<br><br>
+		<div class="scroller" (click)="goToDesc()"><img id="tinyScroll" src="/app/assets/tinyScroll.png"/><img id="largeScroll" src="/app/assets/largeScroll.png"/></div>
+	</div>
 </div>
+
+<div class="simple-holder">
+	<div id="return-recos" style="max-width:900px;margin:auto;text-align:center" *ngIf = "slctdMovie">
+	    <recommended-movies [inputMovie] = "slctdMovie"></recommended-movies>
+	</div>
+</div>
+<div id="desc-holder" style="clear:left">
+	<div id="showcase-holder">
+		<img class="slider-image" src="/app/assets/showcase-roller/showcase0.jpg" height="500px">
+		<img class="slider-image" src="/app/assets/showcase-roller/showcase1.jpg" height="500px">
+		<img class="slider-image" src="/app/assets/showcase-roller/showcase2.jpg" height="500px">
+		<img class="slider-image" src="/app/assets/showcase-roller/showcase3.jpg" height="500px">
+		<img class="slider-image" src="/app/assets/showcase-roller/showcase4.jpg" height="500px">
+		<img class="slider-image" src="/app/assets/showcase-roller/showcase5.jpg" height="500px">
+	</div>
+	<div class="desc">
+		<h2>What is Recoto.me?</h2>
+		Google is an American multinational technology company specializing in Internet-related services and products. These include online advertising technologies, search, cloud computing, software, and hardware. Google was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University, in California. Together, they own about 14 percent of its shares, and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a privately held company on September 4, 1998. An initial public offering (IPO) took place on August 19, 2004, and Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google, Alphabet's leading subsidiary, will continue to be the umbrella company for Alphabet's Internet interests. Upon completion of the restructure, Sundar Pichai became CEO of Google, replacing Larry Page, who became CEO of Alphabet.
+	</div>
+</div>
+<div class="simpleHolder" style="background:#eee">
+	<br>
+	<div id="how-it-works" onresize="resizeHowItWorks()">
+		<h2>How It Works</h2>
+		<!-- Time line Across -->
+		<div class="time-line-center-container"><div id="time-line-center"></div></div>
+		<!-- One timeline Item -->
+		<div class="time-line-item t-clear-right t-float-left">
+			<div class="time-line-text">
+				<h3>Para 1</h3><hr color="#55f">
+				Authoritative data from third party providers
+				Internal tools and data for internal operators
+				Fully automated map creation
+				<br>
+			</div>
+		</div>
+		<div class="time-line-arrow t-float-left t-arrow-right"></div>
+		<div class="time-line-icon t-clear-right"></div>
+
+		<!-- Another Timeline Item -->
+		<div class="time-line-item t-clear-left t-float-right">
+			<div class="time-line-text">
+				<h3>Para 2</h3><hr color="#55f">
+				(1) is what you might consider the “old way” of getting maps into Google, but it’s still useful even in a world where Google makes its own maps. In places where little Street View imagery exists, or Aerial Imagery is low resolution, third party data can help fill in the gaps. It can also be used for comparing against your results as a kind of sanity check.
+				<br>
+			</div>
+		</div>
+		<div class="time-line-arrow t-float-right t-arrow-left"></div>
+		<div class="time-line-icon t-clear-left"></div>
+
+		<!-- One timeline Item -->
+		<div class="time-line-item t-clear-right t-float-left">
+			<div class="time-line-text">
+				<h3>Para 1</h3><hr color="#55f">
+				Authoritative data from third party providers
+				Internal tools and data for internal operators
+				Fully automated map creation
+				<br>
+			</div>
+		</div>
+		<div class="time-line-arrow t-float-left t-arrow-right"></div>
+		<div class="time-line-icon t-clear-right"></div>
+
+		<!-- Another Timeline Item -->
+		<div class="time-line-item t-clear-left t-float-right">
+			<div class="time-line-text">
+				<h3>Para 2</h3><hr color="#55f">
+				(1) is what you might consider the “old way” of getting maps into Google, but it’s still useful even in a world where Google makes its own maps. In places where little Street View imagery exists, or Aerial Imagery is low resolution, third party data can help fill in the gaps. It can also be used for comparing against your results as a kind of sanity check.
+				<br>
+			</div>
+		</div>
+		<div class="time-line-arrow t-float-right t-arrow-left"></div>
+		<div class="time-line-icon t-clear-left"></div>
+
+	</div>
+</div>
+<contact></contact>

@@ -1,9 +1,13 @@
-<input [(ngModel)] = "key" (keyup) = "searchKey.next($event.target.value)"/><button (click) = "passMovie()">Get Recommendations</button>
-<div *ngIf = "showSuggestions">
-    <ul *ngIf = "movies">
-        <li *ngFor = "let movie of movies | slice:0:9" (click) = "selectItem(movie)">
-            <span><h4>{{movie.title}}</h4></span>
-            <span>{{movie.genres}}</span>
-        </li>
-    </ul>
+<div id="searchBar">
+	<input id="recoInput" [(ngModel)] = "key" (keyup) = "searchKey.next($event.target.value)" id="recoInput" placeholder="Artist, Genre, Movie, Book, Game etc"/>
+	<div id="recoButton" (click) = "passMovie()" style="background:white"><img  src="/app/assets/Search.png" height="100%"></div>
+	<!-- suggestions -->
+	<div id="suggDropDown" *ngIf = "showSuggestions">
+	    <ul id="sugg-list" *ngIf = "movies">
+	        <li id="sugg-item" *ngFor = "let movie of movies | slice:0:9" (click) = "selectItem(movie)">
+	            <span>{{movie.title}}<div style="position:relative;float:right;color:#a94;">{{movie.genres}}</div></span>
+	            <br>
+	        </li>
+	    </ul>
+	</div>
 </div>

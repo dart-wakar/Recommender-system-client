@@ -1,12 +1,14 @@
 import { Component,Output,EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { SearchService } from '../../services/search.service';
+declare var $:any;
 
 @Component({
   selector: 'searchbar',
-  templateUrl: './searchbar.component.html'
+  templateUrl: './searchbar.component.html',
+  styleUrls: ['./searchbar.component.css']
 })
-export class SearchbarComponent  { 
+export class SearchbarComponent  {
     searchKey = new BehaviorSubject<string>("");
     showSuggestions:boolean = false;
     movies: any[];
@@ -39,6 +41,10 @@ export class SearchbarComponent  {
     }
 
     passMovie() {
+    /**
+        $('html,body').animate({
+            scrollTop:0},
+            'slow');*/
         console.log(this.selectedMovie);
         this.onMovieSelected.emit(this.selectedMovie);
     }

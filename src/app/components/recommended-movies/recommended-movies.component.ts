@@ -3,7 +3,8 @@ import { RecommendedMoviesService } from '../../services/recommended-movies.serv
 
 @Component({
   selector: 'recommended-movies',
-  templateUrl: './recommended-movies.component.html'
+  templateUrl: './recommended-movies.component.html',
+  styleUrls:['./recommended-movies.component.css']
 })
 export class RecommendedMoviesComponent implements OnInit,OnChanges {
 

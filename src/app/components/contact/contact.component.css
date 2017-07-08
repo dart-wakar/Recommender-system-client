@@ -1,0 +1,142 @@
+
+/* Footer Detail Elements */
+#contact-holder{
+    padding-top:50px;
+    padding-bottom:50px;
+    background:#22353c;
+}
+
+#contact{
+    margin:auto;
+    width:80%;
+    background:grey;
+    padding:40px;
+    max-width:900px;
+	font-size:18px;
+    min-height:500px;
+    border:2px solid #944;
+	min-height:100px;
+    background:none;
+    margin-bottom:50px;
+}
+
+#people{
+    margin:auto;
+    vertical-align: top;
+    width:75%;
+}
+
+.contact-title{
+    margin:auto;
+    width:150px;
+    text-align:center;
+    font-size:22px;
+    margin-top:-40px;
+    font-weight: bold;
+    background:#22353c;
+    color:#999;
+    padding:10px;
+}
+
+.contact-item{
+    display:inline-block;
+    /*background:white;*/
+    margin:auto;
+    vertical-align: top;
+    padding:10px;
+    min-width:200px;
+    margin-bottom:10px;
+    overflow-x:hidden;
+}
+
+img.contact-image{
+    margin:auto;
+    margin-right:10px;
+    vertical-align: top;
+    min-height:50px;
+    min-width:50px;
+    height:60px;
+    min-width:60px;
+    border:6px solid #944;
+    border-radius:200px;
+}
+
+.contact-details{
+    padding-top:10px;
+    min-width:130px;
+    color:#999;
+    min-width:100px;
+    display:inline-block;
+    vertical-align: top;
+    margin:auto;
+    font-size:16px;
+}
+
+a.linked-in{
+    color:#944;
+    font-size:16px;
+    font-weight:900;
+}
+
+a.linked-in:hover{
+    text-decoration: underline;
+}
+
+#queries{
+    display:inline-block;
+    min-width:300px;
+    padding-top:10px;
+    overflow:hidden;
+    padding-bottom:10px;
+    vertical-align: top;
+    font-size:16px;
+}
+
+input.query-input{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+    position:relative;
+    float:right;
+    margin-right:0px;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    background:#333;
+    color:#ddd;
+    outline:none;
+    margin-bottom:10px;
+}
+
+input.query-submit-button{
+    padding:10px;
+    position:relative;
+    float:right;
+    font-size:16px;
+    background:#944;
+    border:none;
+    border-left:2px solid #999;
+    border-radius:5px;
+    color:white;
+    outline:none;
+}
+
+
+input.query-submit-button:hover{
+    cursor: pointer;
+}
+
+input.query-submit-button:active{
+    border-left:none;
+}
+
+#footer{
+    width:100%;
+    background:#334;
+    font-size:16px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:white;
+    text-align:center;
+}
