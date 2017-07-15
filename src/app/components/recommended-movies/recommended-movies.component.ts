@@ -8,7 +8,7 @@ import { RecommendedMoviesService } from '../../services/recommended-movies.serv
 })
 export class RecommendedMoviesComponent implements OnInit,OnChanges {
 
-     componentName = 'RecommendedMovies';
+     componentName = 'Movies';
      @Input() inputMovie:any;
      recommendedMovies:any;
 
@@ -16,6 +16,18 @@ export class RecommendedMoviesComponent implements OnInit,OnChanges {
 
      ngOnInit() {
          this.getRecommendedMovies();
+
+         /** on clicking the movies tab */
+         $('#movie-tab').on("click",function(){
+            $(this).css("background","#944");
+            $('#app-tab').css("background","#22353c");
+         });
+
+         /** on clicking the apps tab */
+         $('#app-tab').on("click",function(){
+            $(this).css("background","#944");
+            $('#movie-tab').css("background","#22353c");
+         });
      }
 
      ngOnChanges() {

@@ -1,4 +1,14 @@
-<h1>{{componentName}}</h1>
-<div id="reco-list-container" *ngIf = "recommendedMovies">
+<div class="list-tab" id="movie-tab">{{componentName}}</div><div class="list-tab" id="app-tab" style="background:#22353c">apps</div>
+<br><br>
+Latest
+<hr>
+<div class="reco-list-container" *ngIf = "recommendedMovies">
     <movies-list [movies] = "recommendedMovies"></movies-list>
 </div>
+<br>
+Trending
+<hr>
+<div class="reco-list-container" *ngIf = "recommendedMovies">
+    <movies-list [movies] = "recommendedMovies"></movies-list>
+</div>
+<br>

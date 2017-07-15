@@ -1,10 +1,28 @@
-/* search area */
-
+/* recommended list of movies, apps etc */
+.list-tab{
+    top:0px;
+    background:#944;
+    color:white;
+    font-size:15px;
+    padding:8px;
+    min-width:100px;
+    border-radius:0px 0px 5px 5px;
+    display:inline-block;
+    vertical-align: top;
+    margin:auto;
+}
+.list-tab:hover{
+    cursor:pointer;
+}
+.list-tab:active{
+    cursor:pointer;
+    font-size:14px;
+}
 .reco-list-container{
     position:relative;
-    width:80%;
-    background:#222;
-    overflow:hidden;
-    min-height:100px;
+    width:100%;
     text-align:center;
+    max-height:500px;
+    overflow-x:auto;
+    overflow-y:hidden;
 }

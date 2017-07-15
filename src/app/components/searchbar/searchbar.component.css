@@ -1,15 +1,17 @@
 
 #recoInput{
-	width:65%;
+	width:100%;
 	position:relative;
 	float:left;
 	font-size:19px;
+	display:inline-block;
 	text-align: center;
 	border-top:2px solid #d88;
 	border-left:2px solid #d88;
 	border-bottom:2px solid #d88;
 	border-right:none;
 	padding:10px;
+	height:50px;
 	border-radius:20px 0px 0px 20px;
 }
 #recoInput:focus{
@@ -17,6 +19,7 @@
 }
 #searchBar{
 	max-height:50px;
+	text-align:center;
 	overflow:visible;
 	z-index:500;
 }
@@ -24,8 +27,8 @@
 	font-family: "Raleway","Calibri";
 	position:relative;
 	float:left;
-	width: 26px;
-	height:26px;
+	width: 50px;
+	height:50px;
     overflow:hidden;
 	border-top:2px solid #d88;
 	border-right:2px solid #d88;
@@ -52,6 +55,7 @@
 }
 ul#sugg-list{
 	background:white;
+	text-align: left;
 	padding-left:0px;
 	box-shadow: 0px 10px 20px #888;
 }
@@ -69,22 +73,22 @@ li#sugg-item:hover{
 /* For Search Bar width adjustment */
 @media screen and (min-width: 350px){
 	#recoInput{
-		width:70%;
+		width:80%;
 	}
 }
 @media screen and (min-width: 490px){
 	#recoInput{
-		width:82%;
+		width:84%;
 	}
 }
 @media screen and (min-width: 600px){
 	#recoInput{
-		width:85%;
+		width:88%;
 	}
 }
 /* For Full Desktop */
 @media screen and (min-width: 800px){
 	#recoInput{
-		width:90%;
+		width:92%;
 	}
 }

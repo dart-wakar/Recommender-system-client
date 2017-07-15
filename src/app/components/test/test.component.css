@@ -2,7 +2,7 @@
 #content{
 	min-height:100%;
 	z-index:500;
-	/*background:url("/app/assets/Images/poly.png");*/
+	background:url("/app/assets/Images/poly.png");
 }
 .content-main{
 	font-size:18px;
